@@ -10,7 +10,7 @@ const Home = () => {
     <Layout>
         <div className='home' style={{backgroundImage: `url(${Banner})`}}>
           <div className='headerContainer'>
-            <h1>Slay_CTF</h1>
+            <span className="type"><span>Slay_CTF</span></span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, natus? Amet veniam nesciunt repellat assumenda. Totam, ullamrkeh bekrhbvkreb kb erkjbkrejb jbkjb kjbk bkj bjk b kj bk jbkj bk bk jbjkbkjb khh volup jeknerjbvker kejrkjerbkjvb ertas! Placeat rem libero minus molestiusto adipisci consectetur amet beatae repellendus.
             </p>
             <Link to='/events'>
