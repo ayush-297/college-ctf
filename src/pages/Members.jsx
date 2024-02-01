@@ -4,7 +4,7 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from '@
 import { MemList } from '../Data/Data'
 
 
-const Events = () => {
+const Members = () => {
   return (
     <Layout>
         <Box sx={{ bgcolor: "black" ,display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
@@ -29,4 +29,4 @@ const Events = () => {
   )
 }
 
-export default Events
+export default Members
