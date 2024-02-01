@@ -15,7 +15,7 @@ const Footer = () => {
             mr:2,
             },
             "& svg:hover":{
-                color: '#1769aa',
+                color: '#e91e63',
                 transform: 'translateX(5px)',
                 transition: 'all 500ms',
             }
