@@ -35,7 +35,7 @@
     padding: 0;
     font-size: 30px;
     font-weight: lighter;
-    color: green;
+    color: white;
 
 }
 
@@ -82,7 +82,7 @@
     }
     .home .headerContainer p{
         font-size: 29px;
-        color: green;
+        color: white;
     }
     .headerContainer button{
         background-color: grey;
