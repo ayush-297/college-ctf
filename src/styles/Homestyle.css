@@ -13,8 +13,8 @@
 
 .headerContainer{
     
-    width: 70%;
-    height: 100%;
+    width: 65%;
+    height: 80%;
     margin-left: 40px;
 }
 
@@ -54,7 +54,7 @@
     font-size: 30px;
     font-weight: lighter;
     color: white;
-
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 .home .headerContainer button{
