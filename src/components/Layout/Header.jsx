@@ -28,11 +28,14 @@ const Header = () => {
               <li>
                 <Link to={'/about'}>About</Link>
               </li >
-              <li >
+              <li>
                 <Link to={'/contact'}>Contact</Link>
               </li>
               <li>
                 <Link to={'/events'}>Events</Link>
+              </li>
+              <li>
+                <Link to={'/challenges'}>Challenges</Link>
               </li>
             </ul>
       </Box>
@@ -55,7 +58,7 @@ const Header = () => {
           </IconButton>
         <Logo></Logo>
         <Typography color='black' variant='h6' component="div" sx={{flexGrow : 1} }>
-          CTF_WEBSITE
+        <Link to={'/'} style={{color: 'black',textDecoration:'none'}}>CTF_WEBSITE</Link>
         </Typography>
         <Box sx={{display: {xs:'none',sm:"block"}}}>
           <ul className='navigation-menu'>
@@ -71,6 +74,9 @@ const Header = () => {
             <li>
               <Link to={'/events'}>Events</Link>
             </li>
+            <li>
+                <Link to={'/challenges'}>Challenges</Link>
+              </li>
           </ul>
         </Box>
         </Toolbar>
