@@ -5,17 +5,17 @@ import mem3 from '../image/mem3.jpg'
 
 export const MemList = [
     {
-        name: 'Name1',
+        name: 'Sandipan Chatterjee',
         description: "sadhbflasjkb kjsbdvb ksjdb lks bkjsb jkbskjbsklbf kd jbksjab k b",
         image:mem1,
     },
     {
-        name: 'Name1',
+        name: 'Pankaj Barman',
         description: "sadhbflasjkb kjsbdvb ksjdb lks bkjsb jkbskjbsklbf kd jbksjab k b",
         image:mem2,
     },
     {
-        name: 'Name1',
+        name: 'Spandan Bhattacharya',
         description: "sadhbflasjkb kjsbdvb ksjdb lks bkjsb jkbskjbsklbf kd jbksjab k b",
         image:mem3,
     }

@@ -1,13 +1,22 @@
 .home{
     height: 100vh;
     display: flex;
-    align-items: left;
-    flex-direction: column;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
+    justify-content: space-between;
+    align-items: right;
+    flex-direction: row-reverse;
+    /* position: absolute; */
     
     flex-wrap: nowrap;
+}
+
+.home .slaylogo img{
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: 400px;
+    width: 400px;
 }
 
 
@@ -15,7 +24,7 @@
     
     width: 65%;
     height: 80%;
-    margin-left: 40px;
+    margin-left: -160px;
 }
 
 .home .headerContainer{
@@ -25,7 +34,7 @@
     padding-top: 70px;
     padding-bottom: 70px;
     font-size: 70px;
-    color: #f01c64;
+    color: #0fcf02;
     font-family: 'Roboto', sans-serif;;
 }
 
@@ -49,7 +58,7 @@
 
 .home .headerContainer p{
 
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 0;
     font-size: 30px;
     font-weight: lighter;
@@ -77,13 +86,23 @@
     transition: 0.3s ease-in;
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:800px){
+    .home .slaylogo img{
+        display: flex;
+        position: relative;
+        margin-top: 100px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        height: 300px;
+        width: 300px;
+    }
+
     .home{
         align-items: left;
     }
     .headerContainer{
-        margin-left: 0;
-        border-radius: 10px;
+        /* margin-left: -160px; */
+        /* border-radius: 10px; */
         width: 80%;
         display: flex;
         align-items: left;
@@ -93,13 +112,14 @@
         flex-wrap: nowrap;
     }
 
-    .home .headerContainer h1{
-        font-size: 40px;
+    .home .headerContainer span{
+        display: flex;
+        font-size: 25px;
         height: 30px;
-        margin: 15px 0px;
     }
     .home .headerContainer p{
-        font-size: 29px;
+        margin-top: 20px;
+        font-size: 23px;
         color: white;
     }
     .headerContainer button{

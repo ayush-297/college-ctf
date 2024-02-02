@@ -21,6 +21,7 @@ const About = () => {
             fontSize: "2rem"
           },
           "& p":{
+            margin: "10px",
             color: "green",
             textAlign: 'justify',
           },
@@ -31,7 +32,7 @@ const About = () => {
             }
           }
         }}>
-          <Typography variant="h4" color="#e91e63">
+          <Typography variant="h4" color="#ff004e">
             Welcome to the Slay_Ctf
           </Typography>
           <p>

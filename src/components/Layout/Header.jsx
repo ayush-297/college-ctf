@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <>
     <Box>
-      <AppBar component={'nav'} sx={ {bgcolor: "#e91e63"}}>
+      <AppBar component={'nav'} sx={ {bgcolor: "#ff004e"}}>
         <Toolbar>
           <IconButton color='black' 
           aria-label="open drawer" 

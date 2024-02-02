@@ -6,8 +6,9 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Pagenotfound from './pages/Pagenotfound'
 import Members from './pages/Members'
-import Challenges from './pages/challenges'
+import Challenges from './pages/Challenges'
 import Login from './pages/login'
+import Events from './pages/Events'
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/members" element={<Members></Members>}/>
           <Route path="/challenges" element={<Challenges></Challenges>}/>
           <Route path="/login" element={<Login></Login>}/>
+          <Route path="/events" element={<Events></Events>}/>
           <Route path="*" element={<Pagenotfound></Pagenotfound>}/>
         </Routes>
       </BrowserRouter>
