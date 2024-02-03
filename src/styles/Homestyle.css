@@ -86,7 +86,7 @@
 }
 
 @media only screen and (max-width:800px){
-    .home{
+    .home .slaylogo img{
         display: flex;
         position: relative;
         margin-top: 100px;
