@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <Box sx={{bgcolor: "black"}}>
     <Layout>
-        <Box sx={{my: 5,ml: 10,"& h4":{fontWeight: 'bold'}, mb: 2,"& p":{
+        <Box sx={{my: 5,ml: 3,"& h4":{fontWeight: 'bold'}, mb: 2,"& p":{
             color: "green",
             margin:"10px",
             textAlign: 'justify',
@@ -27,7 +27,7 @@ const Contact = () => {
           </Typography>
           {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda at quis voluptatum rerum eum earum nesciunt, neque asperiores facilis ducimus recusandae distinctio impedit, libero alias labore quae architecto molestiae quibusdam corrupti commodi nostrum pariatur aliquam est? Accusamus quia eveniet corrupti.</p> */}
         </Box>
-        <Box sx={{m:3, width: "auto", height: "315px", ml:10, "@media (max-width: 600px)":{
+        <Box sx={{m:3, width: "auto", height: "315px", ml:3, "@media (max-width: 600px)":{
           width:"300px",
         }}}>
           <TableContainer component={Paper} sx={{display:"flex", justifyContent:"center"}}>

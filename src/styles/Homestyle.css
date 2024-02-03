@@ -5,7 +5,6 @@
     align-items: right;
     flex-direction: row-reverse;
     /* position: absolute; */
-    
     flex-wrap: nowrap;
 }
 
@@ -33,9 +32,9 @@
     font-weight: bold;
     padding-top: 70px;
     padding-bottom: 70px;
-    font-size: 70px;
+    font-size: 100px;
     color: #0fcf02;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'VT323', monospace;
 }
 
 .type {
@@ -63,7 +62,7 @@
     font-size: 30px;
     font-weight: lighter;
     color: white;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    font-family: 'VT323', monospace;
 }
 
 .home .headerContainer button{
@@ -79,11 +78,11 @@
     font-size: 20px;
 }
 
-
 .home .headerContainer button:hover{
     background-color: #f01c64;
     cursor: pointer;
     transition: 0.3s ease-in;
+    box-shadow: 0 0 10px #f01c64, 0 0 40px #f01c64;
 }
 
 @media only screen and (max-width:800px){
@@ -128,3 +127,4 @@
         margin-bottom: 20px;
     }
 }
+
