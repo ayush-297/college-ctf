@@ -18,7 +18,7 @@ const Header = () => {
       <Box className="Drawer" onClick={handleDrawerOpen} sx={{textAlign: 'center', width:"100%", height:"100%"}}>
           <img src={drawerlogo} alt="drawerlogo"/>
           <Typography color='black' variant='h6' component="div" sx={{flexGrow : 1, my:2 } }>
-            CTF_WEBSITE
+            Slay
           </Typography>
           <Divider></Divider>
             <ul className='drawer-navigation'>
@@ -36,6 +36,9 @@ const Header = () => {
               </li>
               <li>
                 <Link to={'/challenges'}>Challenges</Link>
+              </li>
+              <li>
+                <Link to={'/members'}>Members</Link>
               </li>
               <li>
                 <Link to={'/login'}>Login</Link>
@@ -60,8 +63,8 @@ const Header = () => {
             <MenuIcon></MenuIcon>
           </IconButton>
         <Logo></Logo>
-        <Typography color='black' variant='h6' component="div" sx={{flexGrow : 1} }>
-        <Link to={'/'} style={{color: 'black',textDecoration:'none'}}>CTF_WEBSITE</Link>
+        <Typography color='black' variant='h5' component="div" sx={{flexGrow : 1} }>
+        <Link to={'/'} style={{color: 'black', textDecoration:"none", fontFamily:"fantasy"}}>Slay</Link>
         </Typography>
         <Box sx={{display: {xs:'none',sm:"block"}}}>
           <ul className='navigation-menu'>
