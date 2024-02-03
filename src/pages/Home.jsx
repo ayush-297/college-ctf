@@ -23,7 +23,7 @@ const Home = () => {
       }} className='slaylogo'><img src={Banner} alt='logo'></img></motion.div>
           <motion.div animate={{x:200}} transition={{delay:0.1, duration:1}} className='headerContainer'>
             <span className="type"><span>Slay_CTF</span></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, natus? Amet veniam nesciunt repellat assumenda. Totam, ullamrkeh bekrhbvkreb kb erkjbkrejb jbkjb kjbk bkj bjk b kj bk jbkj bk bk jbjkbkjb khh volup jeknerjbvker kejrkjerbkjvb ertas! Placeat rem libero minus molestiusto adipisci consectetur amet beatae repellendus.
+            <p>Calling all codebreakers and puzzle masters! Ready to test your wit? No experience needed, just bring your curiosity and problem-solving skills. Decipher cryptic clues, unlock hidden messages, and capture the flag! Unleash your inner cyber sleuth!
             </p>
             <Link to='/events'>
               <button>

@@ -10,7 +10,7 @@ const Members = () => {
         <Box sx={{ bgcolor: "black" ,display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
           {
             MemList.map(mem => (
-              <Card sx={{maxWidth:'390px', display: "flex", m:2}}>
+              <Card sx={{maxWidth:'390px', display: "flex", m:3}}>
                 <CardActionArea>
                   <CardMedia sx={{minHeight: "400px"}} component={'img'} src={mem.image} alt={mem.name}/>
                   <CardContent>
