@@ -42,7 +42,7 @@
 }
 .type span {
   word-break: break-all;
-  height: 1.2em;
+  height: 1.5em;
   width:0%;
   overflow: hidden;
   animation:t 2s linear infinite alternate;
@@ -65,7 +65,7 @@
     font-family: 'VT323', monospace;
 }
 
-.home .headerContainer button{
+.home .headerContainer .event-button button{
     color: black;
     background-color: grey;
     margin-top: 20px;
@@ -78,7 +78,7 @@
     font-size: 20px;
 }
 
-.home .headerContainer button:hover{
+.home .headerContainer .event-button button:hover{
     background-color: #f01c64;
     cursor: pointer;
     transition: 0.3s ease-in;
@@ -113,15 +113,15 @@
 
     .home .headerContainer span{
         display: flex;
-        font-size: 25px;
-        height: 30px;
+        font-size: 20px;
+        height: 25px;
     }
     .home .headerContainer p{
         margin-top: 20px;
         font-size: 23px;
         color: white;
     }
-    .headerContainer button{
+    .headerContainer .event-button{
         background-color: grey;
         color: black;
         margin-bottom: 20px;
