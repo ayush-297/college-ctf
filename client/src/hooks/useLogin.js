@@ -14,6 +14,7 @@ export const useLogin = () => {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
                 'Accept': 'application/json'
             },
             body: JSON.stringify({ email, password })
@@ -24,7 +25,7 @@ export const useLogin = () => {
             setError(data.error);
         } else {
             // save the user to local storage
-            console.log(JSON.stringify(data))
+            // console.log(JSON.stringify(data))
             localStorage.setItem('slayer', JSON.stringify(data));
             dispatch({ type: 'LOGIN', payload: data })
 

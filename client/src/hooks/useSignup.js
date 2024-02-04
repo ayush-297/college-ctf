@@ -11,7 +11,7 @@ export const useSignup = () => {
         setError(null);
         const resp = await fetch(apiConfig.URL + '/userapi/signup', {
             method: 'POST',
-            headers: { 'Content-type': 'application/json' },
+            headers: { 'Content-type': 'application/json','Access-Control-Allow-Origin': '*' },
             body: JSON.stringify({ name, email, phone, password, transactionid })
         })
         const data = await resp.json();
