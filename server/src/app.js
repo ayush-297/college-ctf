@@ -7,8 +7,9 @@ const PORT = process.env.PORT || 8080;
 const cookieParser = require('cookie-parser');
 const userRouter = require('./routes/userRouter');
 app.use(cors({
-    origin: ['http://localhost:3001','https://college-ctf.vercel.app/'],
-    methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH']
+    origin: ['http://localhost:3000','https://college-ctf.vercel.app/'],
+    methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
+    credentials:true
 }))
 require('./db/connection');
 app.use(express.urlencoded({ extended: false }));
