@@ -1,0 +1,635 @@
+/* <style> */
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Oranienbaum&family=Press+Start+2P&display=swap');
+/* </style> */
+.body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap:50px;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	/* background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); */
+
+}
+.main{
+	width: 350px;
+	height: 650px;
+	max-height: 900px;
+	/* background: red; */
+	background-color: rgba(255,255,255,0.1);
+	overflow: hidden;
+	/* background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover; */
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	padding: 20px 0px;
+}
+#chk{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+	/* background: #fff; */
+}
+.label{
+	color: #fff;
+	font-size: 2rem;
+	justify-content: center;
+	display: flex;
+	/* margin: 20px; */
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+	font-family: 'Press Start 2P', system-ui;
+}
+.input{
+	width: 70%;
+	/* height: 40px; */
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 10px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 8px;
+}
+.button{
+	/* width: 70%; */
+	height: 40px;
+	padding: 10px;
+	margin: 10px auto;
+	justify-content: center;
+	/* display: block;
+	 */
+	 display: flex;
+	 align-items: center;
+	color: #fff;
+	background-color: #f01c63a2;
+	font-size: .9rem;
+	font-weight: bold;
+	/* margin-top: 20px; */
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+	font-family: 'Press Start 2P', system-ui;
+}
+.button:hover{
+	background: #f01c63c5;
+}
+.button:disabled{
+	opacity: 0.4;
+}
+
+.login{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-30px);
+	transition: .8s ease-in-out;
+}
+.login label{
+	color: #000;
+	transform: scale(.6);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-300px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+
+/* Sign Up Part CSS code */
+
+.error {
+	padding: 3px 7px;
+	color: #f60c0cab;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	}
+
+input:not([type="submit"]) {
+	width: 20vw;
+	padding: 10px 10px 10px 30px;
+	outline: none;
+	border: none;
+	border: 1px solid #6d7993;
+	border-radius: 8px;
+	/* margin-top: 1.7rem; */
+  }
+.info_field {
+position: relative;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.info_icon {
+position: absolute;
+left: 2px;
+color: #6d7993;
+}
+.user_acc_info{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.acc__credentials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pw_icon {
+    position: absolute;
+    right: 5px;
+    color: #6d7993;
+  }
+  .qr1{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap:20px;
+	align-items: center;
+	width:400px;
+	height: 400px;
+	color: white;
+	background: rgba(255,255,255,0.1);
+  }
+  .buttons{
+	width: 350px;
+	display: none;
+  }
+  button {
+	position: relative;
+	background: #444;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: none;
+	letter-spacing: 0.1rem;
+	font-size: 1rem;
+	padding: 1rem 2.45rem;
+	transition: 0.2s;
+  }
+  
+  button:hover {
+	letter-spacing: 0.2rem;
+	padding: 1.1rem 3.1rem;
+	background:#ff004e;
+	color: var(white);
+	animation: box 3s infinite;
+  }
+  
+  button::before {
+	position: absolute;
+	inset: 2px;
+	background: #272822;
+  }
+  
+  button span {
+	position: relative;
+	z-index: 1;
+  }
+  button i {
+	position: absolute;
+	inset: 0;
+	display: block;
+  }
+  
+  button i::before {
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	left: 80%;
+	top: -2px;
+	border: 2px solid var(green);
+	background: #272822;
+	transition: 0.2s;
+  }
+  
+  button:hover i::before {
+	width: 15px;
+	left: 20%;
+	animation: move 3s infinite;
+  }
+  
+  button i::after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	left: 20%;
+	bottom: -2px;
+	border: 2px solid var(#0FF0FC);
+	background: #272822;
+	transition: 0.2s;
+  }
+  
+  button:hover i::after {
+	width: 15px;
+	left: 80%;
+	animation: move 3s infinite;
+  }
+  
+  @keyframes move {
+	0% {
+	  transform: translateX(0);
+	}
+	50% {
+	  transform: translateX(5px);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+  }
+  
+  @keyframes box {
+	0% {
+	  box-shadow: #27272c;
+	}
+	50% {
+	  box-shadow: 0 0 25px var(#FF44CC);
+	}
+	100% {
+	  box-shadow: #27272c;
+	}
+  }
+  .qr1 img{
+      height: 200px;
+	  width:200px;
+  }
+  .para{
+	color: white;
+	padding: 20px;
+  }
+  .qr{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap:20px;
+	align-items: center;
+	width:400px;
+	height: 400px;
+	background: rgba(255,255,255,0);
+  }
+  .change-button{
+	display: flex;
+	flex-direction: column;
+	gap:20px;
+  }
+  .right{
+	display: flex;
+	flex-direction: column;
+	gap:2px;
+  }
+  .py{
+	display: none;
+  }
+  @media only screen and (max-width:800px)
+  {
+	.pay{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: -10px;
+		text-decoration: none;
+	}
+	.pay .py{
+		display: block;
+		background-color: green;
+		color: green;
+		text-decoration: none;
+		text-decoration: underline;
+		opacity: 1;
+		color: white;
+	}
+	Link{
+		text-decoration: none;
+	}
+	.left{
+		display: none;
+	}
+	.body{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap:50px;
+		min-height: 100vh;
+		font-family: 'Jost', sans-serif;
+		/* background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); */
+	
+	}
+	.main{
+		width: 350px;
+		height: 625px;
+		max-height: 900px;
+		/* background: red; */
+		background-color: rgba(255,255,255,0.1);
+		overflow: hidden;
+		/* background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover; */
+		border-radius: 10px;
+		box-shadow: 5px 20px 50px #000;
+		padding: 20px 0px;
+	}
+	#chk{
+		display: none;
+	}
+	.signup{
+		position: relative;
+		width:100%;
+		height: 100%;
+		/* background: #fff; */
+	}
+	.label{
+		color: #fff;
+		font-size: 2rem;
+		justify-content: center;
+		display: flex;
+		/* margin: 20px; */
+		font-weight: bold;
+		cursor: pointer;
+		transition: .5s ease-in-out;
+		font-family: 'Press Start 2P', system-ui;
+	}
+	.input{
+		width: 70%;
+		/* height: 40px; */
+		background: #e0dede;
+		justify-content: center;
+		display: flex;
+		margin: 20px auto;
+		padding: 10px;
+		border: none;
+		outline: none;
+		border-radius: 8px;
+	}
+	.button{
+		/* width: 70%; */
+		height: 40px;
+		padding: 10px;
+		margin: 10px auto;
+		justify-content: center;
+		/* display: block;
+		 */
+		 display: flex;
+		 align-items: center;
+		color: #fff;
+		background-color: #f01c63a2;
+		font-size: .9rem;
+		font-weight: bold;
+		/* margin-top: 20px; */
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		transition: .2s ease-in;
+		cursor: pointer;
+		font-family: 'Press Start 2P', system-ui;
+	}
+	.button:hover{
+		background: #f01c63c5;
+	}
+	.button:disabled{
+		opacity: 0.4;
+	}
+	
+	.login{
+		height: 460px;
+		background: #eee;
+		border-radius: 60% / 10%;
+		transform: translateY(-30px);
+		transition: .8s ease-in-out;
+	}
+	.login label{
+		color: #000;
+		transform: scale(.6);
+	}
+	
+	#chk:checked ~ .login{
+		transform: translateY(-300px);
+	}
+	#chk:checked ~ .login label{
+		transform: scale(1);	
+	}
+	#chk:checked ~ .signup label{
+		transform: scale(.6);
+	}
+	
+	/* Sign Up Part CSS code */
+	
+	.error {
+		padding: 3px 7px;
+		color: #f60c0cab;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		}
+	
+	input:not([type="submit"]) {
+		width: 250px;
+		padding: 10px 10px 10px 30px;
+		outline: none;
+		border: none;
+		border: 1px solid #6d7993;
+		border-radius: 8px;
+		/* margin-top: 1.7rem; */
+	  }
+	.info_field {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	}
+	
+	.info_icon {
+	position: absolute;
+	left: 2px;
+	color: #6d7993;
+	}
+	.user_acc_info{
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	}
+	
+	.acc__credentials{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	#pw_icon {
+		position: absolute;
+		right: 5px;
+		color: #6d7993;
+	  }
+	  .qr1{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap:20px;
+		align-items: center;
+		width:400px;
+		height: 400px;
+		color: white;
+		background: rgba(255,255,255,0.1);
+	  }
+	  .buttons{
+		width: 350px;
+		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	  }
+	  button {
+		position: relative;
+		background: #444;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		border: none;
+		letter-spacing: 0.1rem;
+		font-size: 1rem;
+		padding: 1rem 2rem;
+		transition: 0.2s;
+	  }
+	  
+	  button:hover {
+		letter-spacing: 0.2rem;
+		padding: 1.1rem 3.1rem;
+		background:#ff004e;
+		color: var(white);
+		animation: box 3s infinite;
+	  }
+	  
+	  button::before {
+		position: absolute;
+		inset: 2px;
+		background: #272822;
+	  }
+	  
+	  button span {
+		position: relative;
+		z-index: 1;
+	  }
+	  button i {
+		position: absolute;
+		inset: 0;
+		display: block;
+	  }
+	  
+	  button i::before {
+		position: absolute;
+		width: 10px;
+		height: 2px;
+		left: 80%;
+		top: -2px;
+		border: 2px solid var(green);
+		background: #272822;
+		transition: 0.2s;
+	  }
+	  
+	  button:hover i::before {
+		width: 15px;
+		left: 20%;
+		animation: move 3s infinite;
+	  }
+	  
+	  button i::after {
+		content: "";
+		position: absolute;
+		width: 10px;
+		height: 2px;
+		left: 20%;
+		bottom: -2px;
+		border: 2px solid var(#0FF0FC);
+		background: #272822;
+		transition: 0.2s;
+	  }
+	  
+	  button:hover i::after {
+		width: 15px;
+		left: 80%;
+		animation: move 3s infinite;
+	  }
+	  
+	  @keyframes move {
+		0% {
+		  transform: translateX(0);
+		}
+		50% {
+		  transform: translateX(5px);
+		}
+		100% {
+		  transform: translateX(0);
+		}
+	  }
+	  
+	  @keyframes box {
+		0% {
+		  box-shadow: #27272c;
+		}
+		50% {
+		  box-shadow: 0 0 25px var(#FF44CC);
+		}
+		100% {
+		  box-shadow: #27272c;
+		}
+	  }
+	  .qr1 img{
+		  height: 200px;
+		  width:200px;
+	  }
+	  .para{
+		color: white;
+		padding: 20px;
+	  }
+	  .qr{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap:20px;
+		align-items: center;
+		width:400px;
+		height: 400px;
+		background: rgba(255,255,255,0);
+	  }
+	  .change-button{
+		display: flex;
+		flex-direction: column;
+		gap:20px;
+	  }
+	  .right{
+		display: flex;
+		flex-direction: column;
+		gap:2px;
+	  }
+	  
+  }
+  .t1{
+	width: 50px;
+  }
+  .t2{
+	width: 50px;
+  }

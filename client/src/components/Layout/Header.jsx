@@ -5,10 +5,32 @@ import {Link} from 'react-router-dom';
 import '../../styles/headerstyles.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import drawerlogo from '../../assets/output-onlinepngtools.png'
+import { useAuthContext } from '../../hooks/useAuthContext';
+import { useLogout } from '../../hooks/useLogout';
+import { Logout } from '@mui/icons-material'
+
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+
 // import '../../styles/headerstyles.css'
 const Header = () => {
-
+  const { user } = useAuthContext();
+  const { logout } = useLogout();
+  const [open, setOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const handleLogout = () => {
+      setOpen(true);
+  }
+  const handlePermission = () => {
+    setOpen(false);
+    logout();
+}
+const handleClose = () => {
+    setOpen(false);
+}
 
   const handleDrawerOpen = () => {
     setDrawerOpen(!drawerOpen);
@@ -40,9 +62,13 @@ const Header = () => {
               <li>
                 <Link to={'/members'}>Members</Link>
               </li>
-              <li>
+              {user? (<div className='profile_name'>
+                        <p>{user.user.name}</p>
+                        <button onClick={handleLogout} className='logout__btn' ><Logout fontSize='small' /> LogOut</button>
+              </div>) :
+              (<li>
                 <Link to={'/login'}>Login</Link>
-              </li>
+              </li>)}
             </ul>
       </Box>
   )
@@ -83,9 +109,29 @@ const Header = () => {
             <li>
                 <Link to={'/challenges'}>Challenges</Link>
               </li>
-              <li>
+              {user? (<div className='profile_name'>
+                        <p>{user.user.name}</p>
+                        <button onClick={handleLogout} className='logout__btn' ><Logout fontSize='small' /> LogOut</button>
+              </div>) :
+              (<li>
                 <Link to={'/login'}>Login</Link>
-              </li>
+              </li>)}
+              <Dialog
+                        open={open}
+                        onClose={handleClose}
+                        aria-labelledby="alert-dialog-title"
+                        aria-describedby="alert-dialog-description"
+                    >
+                        <DialogContent>
+                            <DialogContentText id="alert-dialog-description" style={{ color: '#2d2c39', fontFamily: 'Poppins' }}>
+                                Are you sure, you want to log out?
+                            </DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button onClick={handleClose} autoFocus>Cancel</Button>
+                            <Button onClick={handlePermission} style={{ color: '#e04e4e' }}>Logout</Button>
+                        </DialogActions>
+                    </Dialog>
           </ul>
         </Box>
         </Toolbar>
