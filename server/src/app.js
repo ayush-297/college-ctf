@@ -6,11 +6,12 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 8080;
 const cookieParser = require('cookie-parser');
 const userRouter = require('./routes/userRouter');
-app.use(cors({
-    origin: ['http://localhost:3000','https://college-ctf.vercel.app/'],
-    methods: ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
-    credentials:true
-}))
+app.use(cors())
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
+
 require('./db/connection');
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
