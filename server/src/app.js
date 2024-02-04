@@ -16,7 +16,9 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(cookieParser())
 app.use('/userapi', userRouter);
-
+app.get('/',async (req,res) =>{
+    return res.send('Hello')
+}
 
 app.listen(PORT, () => {
     console.log(`Listening to the port ${PORT}`);
